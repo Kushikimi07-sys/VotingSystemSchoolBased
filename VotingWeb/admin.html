@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- 🔥 IMPORTANT: CSS LINK -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="header">
+  ADMIN PANEL
+  <button onclick="logout()" class="logout-btn">Logout</button>
+</div>
+
+<div class="container">
+
+  <div class="grid">
+
+    <!-- TEAM -->
+    <div class="card">
+      <h3>Add Team</h3>
+      <input id="teamName" placeholder="Team name">
+      <button onclick="addTeam()">Add</button>
+    </div>
+
+    <!-- POSITION -->
+    <div class="card">
+      <h3>Add Position</h3>
+      <input id="positionName" placeholder="Position name">
+      <button onclick="addPosition()">Add</button>
+    </div>
+
+  </div>
+
+  <!-- CANDIDATE -->
+  <div class="card">
+    <h3>Add Candidate</h3>
+    <input id="candidateName" placeholder="Candidate name">
+
+    <select id="team"></select>
+    <select id="position"></select>
+
+    <button onclick="addCandidate()">Add Candidate</button>
+  </div>
+
+  <!-- RESULTS -->
+<div class="card">
+  <h3>📊 Live Analytics</h3>
+  <button onclick="loadCharts()">Refresh</button>
+  <div id="charts" class="chart-grid"></div>
+  
+</div>
+
+</div>
+
+<script src="./app.js"></script>
+<script>
+  adminInit();
+  loadCharts();
+  setInterval(loadCharts, 3000); // 🔥 LIVE UPDATE
+</script>
+
+</body>
+</html>

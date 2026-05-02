@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="card">
+    <h2>LOGIN</h2>
+
+    <select id="role">
+      <option value="admin">Admin</option>
+      <option value="voter">Voter</option>
+    </select>
+
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="login()">LOGIN</button>
+
+    <p style="text-align:center; cursor:pointer;" onclick="toggleRegister()">
+      Don't have account? Register
+    </p>
+  </div>
+
+  <!-- REGISTER (HIDDEN) -->
+<div class="card" id="registerBox" style="display:none;">
+  <h2>REGISTER</h2>
+
+  <input id="regUsername" placeholder="Username">
+  <input id="regPassword" type="password" placeholder="Password">
+
+  <!-- 🔥 ADD ROLE -->
+  <select id="regRole">
+    <option value="voter">Voter</option>
+    <option value="admin">Admin</option>
+  </select>
+
+  <button onclick="register()">CREATE ACCOUNT</button>
+</div>
+
+<script src="./app.js"></script>
+</body>
+</html>
