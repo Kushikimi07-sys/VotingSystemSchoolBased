@@ -31,7 +31,7 @@ namespace VotingAPI.Controllers
             if (u == null)
                 return Unauthorized();
 
-            // 🔥 FIXED ROLE
+            //  FIXED ROLE
             var role = string.IsNullOrEmpty(u.Role) ? "voter" : u.Role.ToLower().Trim();
 
             return Ok(new
@@ -69,5 +69,26 @@ namespace VotingAPI.Controllers
                 return StatusCode(500, "Server error");
             }
         }
+
+[HttpGet("users")]
+public IActionResult GetUsers()
+{
+    var users = _context.Users.ToList();
+    return Ok(users);
+}
+
+[HttpDelete("{id}")]
+public IActionResult DeleteUser(int id)
+{
+    var user = _context.Users.Find(id);
+    if (user == null)
+        return NotFound();
+
+    _context.Users.Remove(user);
+    _context.SaveChanges();
+
+    return Ok("Deleted");
+}
+
     }
 }

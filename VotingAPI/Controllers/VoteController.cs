@@ -17,7 +17,7 @@ namespace VotingAPI.Controllers
             _context = context;
         }
 
-        // 🗳️ SUBMIT VOTE
+        //  SUBMIT VOTE
         [HttpPost]
         public IActionResult Vote(Vote v)
         {

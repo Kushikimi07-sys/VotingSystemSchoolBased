@@ -23,7 +23,7 @@ namespace VotingAPI.Controllers
         [HttpPost]
 public IActionResult Add([FromBody] Candidate c)
 {
-    // 🔥 IGNORE VALIDATION ERRORS
+    //  IGNORE VALIDATION ERRORS
     ModelState.Clear();
 
     if (string.IsNullOrWhiteSpace(c.Name))
@@ -34,5 +34,38 @@ public IActionResult Add([FromBody] Candidate c)
 
     return Ok(c);
 }
+
+[HttpPut("{id}")]
+public IActionResult Update(int id, Candidate c)
+{
+    if (id != c.Id)
+        return BadRequest();
+
+    var existing = _context.Candidates.Find(id);
+    if (existing == null)
+        return NotFound();
+
+    existing.Name = c.Name;
+    existing.TeamId = c.TeamId;
+    existing.PositionId = c.PositionId;
+
+    _context.SaveChanges();
+
+    return Ok(existing);
+}
+
+[HttpDelete("{id}")]
+public IActionResult Delete(int id)
+{
+    var c = _context.Candidates.Find(id);
+    if (c == null)
+        return NotFound();
+
+    _context.Candidates.Remove(c);
+    _context.SaveChanges();
+
+    return Ok("Deleted");
+}
+
     }
 }

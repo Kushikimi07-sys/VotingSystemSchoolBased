@@ -87,7 +87,7 @@ async function register(){
     body: JSON.stringify({
       username,
       password,
-      role   // 🔥 SEND ROLE
+      role   //  SEND ROLE
     })
   });
 
@@ -122,7 +122,8 @@ async function adminInit(){
     return;
   }
 
-  await loadDropdowns(); // 🔥 CRITICAL
+  await loadDropdowns();
+  await loadAll(); //  CRITICAL
 }
 // ===== LOAD DROPDOWNS =====
 async function loadDropdowns(){
@@ -446,3 +447,124 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+async function loadAll(){
+  loadTeams();
+  loadCandidates();
+  loadVoters();
+}
+
+async function loadTeams(){
+  const res = await fetch(API+"Team");
+  const data = await res.json();
+
+  let html = "";
+
+  data.forEach(t=>{
+    html += `
+      <tr>
+        <td>${t.name}</td>
+        <td>
+          <button onclick="editTeam(${t.id}, '${t.name}')">Edit</button>
+          <button onclick="deleteTeam(${t.id})">Delete</button>
+        </td>
+      </tr>
+    `;
+  });
+
+  document.getElementById("teamTable").innerHTML = html;
+}
+
+async function loadCandidates(){
+  const res = await fetch(API+"Candidate");
+  const data = await res.json();
+
+  let html = "";
+
+  data.forEach(c=>{
+    html += `
+      <tr>
+        <td>${c.name}</td>
+        <td>${c.teamId}</td>
+        <td>${c.positionId}</td>
+        <td>
+          <button onclick="editCandidate(${c.id}, '${c.name}', ${c.teamId}, ${c.positionId})">Edit</button>
+          <button onclick="deleteCandidate(${c.id})">Delete</button>
+        </td>
+      </tr>
+    `;
+  });
+
+  document.getElementById("candidateTable").innerHTML = html;
+}
+
+async function loadVoters(){
+  const res = await fetch(API+"Auth/users");
+  const data = await res.json();
+
+  let html = "";
+
+  data.forEach(u=>{
+    if(u.role === "voter"){
+      html += `
+        <tr>
+          <td>${u.username}</td>
+          <td>
+            <button onclick="deleteVoter(${u.id})">Delete</button>
+          </td>
+        </tr>
+      `;
+    }
+  });
+
+  document.getElementById("voterTable").innerHTML = html;
+}
+
+// TEAM
+function editTeam(id,name){
+  const newName = prompt("Edit team:", name);
+  if(newName){
+    fetch(API+"Team/"+id,{
+      method:"PUT",
+      headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({id,name:newName})
+    }).then(loadTeams);
+  }
+}
+
+function deleteTeam(id){
+  if(!confirm("Delete team?")) return;
+
+  fetch(API+"Team/"+id,{
+    method:"DELETE"
+  }).then(loadTeams);
+}
+
+// CANDIDATE
+function editCandidate(id,name,teamId,positionId){
+  const newName = prompt("Edit name:", name);
+  if(newName){
+    fetch(API+"Candidate/"+id,{
+      method:"PUT",
+      headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({id,name:newName,teamId,positionId})
+    }).then(loadCandidates);
+  }
+}
+
+function deleteCandidate(id){
+  if(!confirm("Delete candidate?")) return;
+
+  fetch(API+"Candidate/"+id,{
+    method:"DELETE"
+  }).then(loadCandidates);
+}
+
+// VOTER
+function deleteVoter(id){
+  if(!confirm("Delete voter?")) return;
+
+  fetch(API+"Auth/"+id,{
+    method:"DELETE"
+  }).then(loadVoters);
+}

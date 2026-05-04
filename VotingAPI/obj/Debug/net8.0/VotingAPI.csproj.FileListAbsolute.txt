@@ -47,3 +47,4 @@ C:\Users\Administrator\VotingSystem\VotingAPI\obj\Debug\net8.0\refint\VotingAPI.
 C:\Users\Administrator\VotingSystem\VotingAPI\obj\Debug\net8.0\VotingAPI.pdb
 C:\Users\Administrator\VotingSystem\VotingAPI\obj\Debug\net8.0\VotingAPI.genruntimeconfig.cache
 C:\Users\Administrator\VotingSystem\VotingAPI\obj\Debug\net8.0\ref\VotingAPI.dll
+C:\Users\Administrator\VotingSystem\VotingAPI\obj\Debug\net8.0\VotingAPI.sourcelink.json
