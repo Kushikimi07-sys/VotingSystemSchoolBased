@@ -1,26 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Voter</title>
+
+  <title>Voter Panel</title>
+
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./voter.css">
+
 </head>
+
 <body>
 
-<div class="header">
-  VOTER PANEL
-  <button onclick="logout()" style="float:right;">Logout</button>
-</div>
+<div class="layout">
 
-<div class="container">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
 
-  <div id="candidates"></div>
+    <div>
 
-  <button onclick="submitVotes()">Submit Vote</button>
+      <h1 class="logo">VOTER</h1>
+
+      <div class="menu">
+
+        <button class="nav active">
+          🗳 Cast Vote
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- LOGOUT -->
+    <button onclick="logout()"
+            class="logout-btn">
+
+      Logout
+
+    </button>
+
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <div class="topbar">
+
+      <h2>Election Ballot</h2>
+
+    </div>
+
+    <!-- HERE MAG DISPLAY -->
+    <div id="voteBox"
+         class="vote-grid">
+
+    </div>
+
+    <!-- SUBMIT -->
+    <div class="submit-area">
+
+      <button class="submit-btn"
+              onclick="submitVotes()">
+
+        Submit Vote
+
+      </button>
+
+    </div>
+
+  </div>
 
 </div>
 
 <script src="./app.js"></script>
-<script>voterInit()</script>
+
+<script>
+  voterInit();
+</script>
 
 </body>
 </html>

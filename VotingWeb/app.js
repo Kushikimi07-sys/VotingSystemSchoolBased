@@ -2,11 +2,19 @@ const API = "http://localhost:5194/api/";
 
 // ===== LOGIN =====
 async function login(){
-  const inputRole = (document.getElementById("role").value || "").toLowerCase().trim();
-  const username  = document.getElementById("username").value.trim();
-  const password  = document.getElementById("password").value.trim();
 
-  console.log("INPUT:", { username, password, inputRole });
+  const username =
+  document.getElementById("username")
+  .value.trim();
+
+  const password =
+  document.getElementById("password")
+  .value.trim();
+
+  console.log("INPUT:", {
+    username,
+    password
+  });
 
   if(!username || !password){
     alert("Fill all fields");
@@ -14,90 +22,192 @@ async function login(){
   }
 
   try{
-    const res = await fetch("http://localhost:5194/api/auth/login",{
-      method:"POST",
-      headers:{"Content-Type":"application/json"},
-      body: JSON.stringify({username, password})
-    });
+
+    const res = await fetch(
+      "http://localhost:5194/api/auth/login",
+      {
+        method:"POST",
+
+        headers:{
+          "Content-Type":"application/json"
+        },
+
+        body: JSON.stringify({
+          username,
+          password
+        })
+      }
+    );
 
     console.log("STATUS:", res.status);
 
-    const text = await res.text();     // ← basahon nato raw response
+    const text = await res.text();
+
     console.log("RAW:", text);
 
     if(res.status !== 200){
-      alert("Login failed (check console)");
+      alert("Invalid username or password");
       return;
     }
 
     let user;
+
     try{
+
       user = JSON.parse(text);
+
     }catch(e){
+
       console.error("JSON PARSE ERROR:", e);
+
       alert("Invalid server response");
+
       return;
     }
 
     console.log("USER:", user);
 
-    const dbRole = (user.role || "").toLowerCase().trim();
-    console.log("COMPARE:", { inputRole, dbRole });
+    // SAVE USER
+    localStorage.setItem(
+      "user",
+      JSON.stringify(user)
+    );
 
-    if(dbRole !== inputRole){
-      alert("Wrong role selected");
-      return;
-    }
+    // AUTO REDIRECT
+    if(
+      (user.role || "")
+      .toLowerCase()
+      .trim() === "admin"
+    ){
 
-    localStorage.setItem("user", JSON.stringify(user));
-
-    if(dbRole === "admin"){
       console.log("GO → admin.html");
-      window.location.href = "admin.html";
-    }else{
+
+      window.location.href =
+      "admin.html";
+
+    }
+    else{
+
       console.log("GO → voter.html");
-      window.location.href = "voter.html";
+
+      window.location.href =
+      "voter.html";
+
     }
 
-  }catch(e){
-    console.error("FETCH ERROR:", e);
-    alert("Cannot connect to API");
   }
+  catch(e){
+
+    console.error(
+      "FETCH ERROR:",
+      e
+    );
+
+    alert("Cannot connect to API");
+
+  }
+
+}
+
+// ===== TOGGLE REGISTER =====
+function toggleRegister(){
+
+  const loginBox =
+  document.getElementById("loginBox");
+
+  const registerBox =
+  document.getElementById("registerBox");
+
+  // show register
+  if(
+    registerBox.style.display === "none"
+    ||
+    registerBox.style.display === ""
+  ){
+
+    registerBox.style.display =
+    "block";
+
+    loginBox.style.display =
+    "none";
+
+  }
+  else{
+
+    registerBox.style.display =
+    "none";
+
+    loginBox.style.display =
+    "block";
+
+  }
+
 }
 
 // ===== REGISTER =====
-function toggleRegister(){
-  const box = document.getElementById("registerBox");
-  box.style.display = box.style.display === "none" ? "block" : "none";
-}
-
 async function register(){
-  const username = document.getElementById("regUsername").value.trim();
-  const password = document.getElementById("regPassword").value.trim();
-  const role = document.getElementById("regRole").value;
+
+  const username =
+  document.getElementById("regUsername")
+  .value.trim();
+
+  const password =
+  document.getElementById("regPassword")
+  .value.trim();
+
+  const role =
+  document.getElementById("regRole")
+  .value;
 
   if(!username || !password){
+
     alert("Fill all fields");
+
     return;
   }
 
-  const res = await fetch(API+"auth/register",{
-    method:"POST",
-    headers:{"Content-Type":"application/json"},
-    body: JSON.stringify({
-      username,
-      password,
-      role   //  SEND ROLE
-    })
-  });
+  try{
 
-  if(res.status !== 200){
-    alert("Registration failed");
-    return;
+    const res = await fetch(
+      API + "auth/register",
+      {
+
+        method:"POST",
+
+        headers:{
+          "Content-Type":"application/json"
+        },
+
+        body: JSON.stringify({
+          username,
+          password,
+          role
+        })
+
+      }
+    );
+
+    if(res.status !== 200){
+
+      alert("Registration failed");
+
+      return;
+    }
+
+    alert("Registered successfully!");
+
+    // balik login page
+    toggleRegister();
+
+  }
+  catch(e){
+
+    console.error(e);
+
+    alert("Cannot connect to API");
+
   }
 
-  alert("Registered successfully!");
-  toggleRegister();
 }
 
 // ===== LOGOUT =====
@@ -164,32 +274,64 @@ async function loadDropdowns(){
 let votes = {};
 
 async function voterInit(){
-  const res = await fetch(API+"candidate");
+
+  const user = requireAuth();
+
+  if(user.role !== "voter"){
+    window.location = "login.html";
+    return;
+  }
+
+  const res = await fetch(API + "candidate");
   const data = await res.json();
 
-  const box = document.getElementById("candidates");
+  const box = document.getElementById("voteBox");
 
   const grouped = {};
+
   data.forEach(c=>{
-    if(!grouped[c.positionId]) grouped[c.positionId]=[];
+
+    if(!grouped[c.positionId]){
+      grouped[c.positionId] = [];
+    }
+
     grouped[c.positionId].push(c);
+
   });
 
-  box.innerHTML="";
+  box.innerHTML = "";
 
   Object.keys(grouped).forEach(pos=>{
+
+    const positionName =
+      grouped[pos][0].positionName;
+
     box.innerHTML += `
+
       <div class="ballot">
-        <h3>Position ${pos}</h3>
+
+        <h3>${positionName}</h3>
+
         ${grouped[pos].map(c=>`
-          <label>
-            <input type="radio" name="pos_${pos}" onclick="votes[${pos}] = ${c.id}">
+
+          <label class="candidate-option">
+
+            <input type="radio"
+                   name="pos_${pos}"
+                   onclick="votes[${pos}] = ${c.id}">
+
             ${c.name}
-          </label><br>
+
+          </label>
+
         `).join("")}
+
       </div>
+
     `;
+
   });
+
 }
 
 // ===== SUBMIT =====
@@ -567,4 +709,22 @@ function deleteVoter(id){
   fetch(API+"Auth/"+id,{
     method:"DELETE"
   }).then(loadVoters);
+}
+
+function showSection(id, btn){
+
+  // remove active
+  document.querySelectorAll(".nav").forEach(n=>{
+    n.classList.remove("active");
+  });
+
+  btn.classList.add("active");
+
+  // hide all
+  document.querySelectorAll(".section").forEach(sec=>{
+    sec.classList.add("hidden");
+  });
+
+  // show selected
+  document.getElementById(id).classList.remove("hidden");
 }

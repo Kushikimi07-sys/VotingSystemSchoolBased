@@ -2,84 +2,220 @@
 <html>
 <head>
   <title>Admin Panel</title>
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-<div class="header">
-  ADMIN PANEL
-  <button onclick="logout()" class="logout-btn">Logout</button>
-</div>
+<div class="layout">
 
-<div class="container">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
 
-  <div class="grid">
+    <div>
 
-    <!-- TEAM -->
-    <div class="card">
-      <h3>Add Team</h3>
-      <input id="teamName" placeholder="Team name">
-      <button onclick="addTeam()">Add</button>
+      <h1 class="logo">Voting System
+        (School Base)
+      </h1>
+
+      <div class="menu">
+
+        <!-- DASHBOARD -->
+        <button class="nav active"
+                onclick="showSection('dashboard', this)">
+          📊 Dashboard
+        </button>
+
+        <!-- CANDIDATES -->
+        <button class="nav"
+                onclick="showSection('candidateSection', this)">
+          🗳 Candidates
+        </button>
+
+        <!-- TABLES -->
+        <button class="nav"
+                onclick="showSection('teamSection', this)">
+          👥 Tables
+        </button>
+
+      </div>
+
     </div>
 
-    <!-- POSITION -->
-    <div class="card">
-      <h3>Add Position</h3>
-      <input id="positionName" placeholder="Position name">
-      <button onclick="addPosition()">Add</button>
-    </div>
+    <!-- LOGOUT -->
+    <button onclick="logout()" class="logout-btn">
+      Logout
+    </button>
 
   </div>
 
-  <!-- CANDIDATE -->
-  <div class="card">
-    <h3>Add Candidate</h3>
-    <input id="candidateName" placeholder="Candidate name">
+  <!-- MAIN -->
+  <div class="main">
 
-    <select id="team"></select>
-    <select id="position"></select>
+    <!-- TOP -->
+    <div class="topbar">
+      <h2>Welcome Admin</h2>
+    </div>
 
-    <button onclick="addCandidate()">Add Candidate</button>
+    <!-- ================= DASHBOARD ================= -->
+    <div id="dashboard" class="section">
+
+      <!-- LIVE ANALYTICS -->
+      <div class="card">
+
+        <div class="title-row">
+
+          <h3>📊 Live Analytics</h3>
+
+          <button onclick="loadCharts()">
+            Refresh
+          </button>
+
+        </div>
+
+        <div id="charts" class="chart-grid"></div>
+
+      </div>
+
+    </div>
+
+    <!-- ================= CANDIDATES ================= -->
+    <div id="candidateSection" class="section hidden">
+
+      <!-- TEAM + POSITION -->
+      <div class="grid">
+
+        <!-- ADD TEAM -->
+        <div class="card">
+
+          <h3>Add Team</h3>
+
+          <input id="teamName"
+                 placeholder="Team name">
+
+          <button onclick="addTeam()">
+            Add Team
+          </button>
+
+        </div>
+
+        <!-- ADD POSITION -->
+        <div class="card">
+
+          <h3>Add Position</h3>
+
+          <input id="positionName"
+                 placeholder="Position name">
+
+          <button onclick="addPosition()">
+            Add Position
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- ADD CANDIDATE -->
+      <div class="card">
+
+        <h3>Add Candidate</h3>
+
+        <input id="candidateName"
+               placeholder="Candidate name">
+
+        <select id="team"></select>
+
+        <select id="position"></select>
+
+        <button onclick="addCandidate()">
+          Add Candidate
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- ================= TABLES ================= -->
+    <div id="teamSection" class="section hidden">
+
+      <div class="table-grid">
+
+        <!-- TEAMS -->
+        <div class="card">
+
+          <h3>Teams</h3>
+
+          <table class="table">
+            <tbody id="teamTable"></tbody>
+          </table>
+
+        </div>
+
+        <!-- CANDIDATES -->
+        <div class="card">
+
+          <h3>Candidates</h3>
+
+          <table class="table">
+            <tbody id="candidateTable"></tbody>
+          </table>
+
+        </div>
+
+        <!-- VOTERS -->
+        <div class="card">
+
+          <h3>Voters</h3>
+
+          <table class="table">
+            <tbody id="voterTable"></tbody>
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
-
-   <div class="card">
-  <h3>Teams</h3>
-  <table class="table">
-    <tbody id="teamTable"></tbody>
-  </table>
-</div>
-
-<div class="card">
-  <h3>Candidates</h3>
-  <table class="table">
-    <tbody id="candidateTable"></tbody>
-  </table>
-</div>
-
-<div class="card">
-  <h3>Voters</h3>
-  <table class="table">
-    <tbody id="voterTable"></tbody>
-  </table>
-</div>
-
-  <!-- RESULTS -->
-<div class="card">
-  <h3>📊 Live Analytics</h3>
-  <button onclick="loadCharts()">Refresh</button>
-  <div id="charts" class="chart-grid"></div>
-  
-</div>
 
 </div>
 
 <script src="./app.js"></script>
+
 <script>
+
   adminInit();
+
   loadCharts();
-  setInterval(loadCharts, 3000); // 🔥 LIVE UPDATE
+
+  setInterval(loadCharts, 3000);
+
+  // ================= NAVIGATION =================
+
+  function showSection(id, btn){
+
+    // remove active
+    document.querySelectorAll(".nav").forEach(n=>{
+      n.classList.remove("active");
+    });
+
+    // active current
+    btn.classList.add("active");
+
+    // hide sections
+    document.querySelectorAll(".section").forEach(sec=>{
+      sec.classList.add("hidden");
+    });
+
+    // show selected
+    document.getElementById(id)
+            .classList
+            .remove("hidden");
+  }
+
 </script>
 
 </body>

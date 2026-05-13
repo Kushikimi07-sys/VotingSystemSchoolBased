@@ -1,0 +1,176 @@
+/* ================= LOGIN PAGE ================= */
+
+.login-page{
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:30px;
+
+  background:linear-gradient(
+    135deg,
+    #020617,
+    #0f172a,
+    #1e293b
+  );
+}
+
+.login-wrapper{
+  width:100%;
+  max-width:1000px;
+
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+
+  border-radius:30px;
+
+  overflow:hidden;
+
+  background:#111827;
+
+  box-shadow:0 20px 50px rgba(0,0,0,.5);
+}
+
+/* ================= LEFT SIDE ================= */
+
+.welcome-side{
+  background:linear-gradient(
+    135deg,
+    #16a34a,
+    #22c55e
+  );
+
+  padding:60px 40px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.welcome-side h1{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.welcome-side p{
+  line-height:1.8;
+  color:rgba(255,255,255,.9);
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.form-side{
+  background:#111827;
+
+  padding:60px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.form-side h2{
+  font-size:38px;
+  margin-bottom:30px;
+  text-align:center;
+}
+
+/* ================= FORM ================= */
+
+.form-box{
+  width:100%;
+}
+
+.form-box label{
+  display:block;
+
+  margin-bottom:8px;
+
+  font-weight:600;
+
+  color:#cbd5e1;
+}
+
+.form-box input,
+.form-box select{
+  width:100%;
+
+  padding:15px;
+
+  margin-bottom:18px;
+
+  border:none;
+  outline:none;
+
+  border-radius:14px;
+
+  background:#334155;
+
+  color:white;
+
+  font-size:15px;
+}
+
+.form-box button{
+  width:100%;
+
+  padding:15px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:#22c55e;
+
+  color:white;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.form-box button:hover{
+  opacity:.9;
+  transform:translateY(-2px);
+}
+
+/* ================= SWITCH TEXT ================= */
+
+.switch-text{
+  margin-top:20px;
+
+  text-align:center;
+
+  color:#cbd5e1;
+
+  cursor:pointer;
+}
+
+.switch-text span{
+  color:#22c55e;
+  font-weight:700;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+  .login-wrapper{
+    grid-template-columns:1fr;
+  }
+
+  .welcome-side{
+    display:none;
+  }
+
+  .form-side{
+    padding:40px 25px;
+  }
+
+}

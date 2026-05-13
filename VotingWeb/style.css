@@ -1,189 +1,374 @@
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
 body{
-  margin:0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg,#0f172a,#1e293b,#020617);
+  background:linear-gradient(135deg,#0f172a,#1e293b,#020617);
   color:white;
+  overflow-x:hidden;
 }
 
-/* HEADER */
-.header{
-  text-align:center;
-  font-size:24px;
-  font-weight:bold;
-  padding:20px;
-  letter-spacing:1px;
+/* =========================
+   LAYOUT
+========================= */
+
+.layout{
+  display:flex;
+  min-height:100vh;
 }
 
-/* CONTAINER */
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:30px;
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar{
+  width:220px;
+
+  background:linear-gradient(
+    180deg,
+    #081224,
+    #0f172a
+  );
+
+  padding:30px 20px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  border-right:1px solid rgba(255,255,255,.05);
+
+  box-shadow:0 0 30px rgba(0,0,0,.5);
+
+  flex-shrink:0;
 }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
+.logo{
+  font-size:34px;
+  font-weight:700;
+  margin-bottom:40px;
 }
 
-/* CARD */
-.card{
-  backdrop-filter: blur(15px);
-  background: rgba(255,255,255,0.05);
+/* =========================
+   MENU
+========================= */
+
+.menu{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.nav{
+  background:#0f172a;
+
+  border:none;
+
+  color:#94a3b8;
+
+  padding:16px;
+
   border-radius:16px;
-  padding:20px;
-  margin-bottom:20px;
-  box-shadow:0 8px 30px rgba(0,0,0,0.4);
-}
 
-/* INPUT */
-input, select{
-  width:100%;
-  padding:12px;
-  margin:8px 0;
-  border:none;
-  border-radius:8px;
-  background: rgba(255,255,255,0.1);
-  color:white;
-}
+  text-align:left;
 
-/* BUTTON */
-button{
-  padding:12px;
-  border:none;
-  border-radius:8px;
-  background: linear-gradient(135deg,#22c55e,#16a34a);
-  color:white;
-  font-weight:bold;
+  font-size:17px;
+
+  font-weight:600;
+
   cursor:pointer;
-  transition:0.3s;
+
+  transition:.3s;
+
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 
-button:hover{
-  transform:scale(1.05);
-  background: linear-gradient(135deg,#16a34a,#15803d);
-}body{
-  margin:0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg,#0f172a,#1e293b,#020617);
+.nav:hover,
+.nav.active{
+  background:#22c55e;
   color:white;
+
+  box-shadow:0 0 20px rgba(34,197,94,.3);
 }
 
-/* HEADER */
-.header{
-  text-align:center;
-  font-size:24px;
-  font-weight:bold;
-  padding:20px;
-  letter-spacing:1px;
-}
-
-/* CONTAINER */
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:30px;
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-
-/* CARD */
-.card{
-  backdrop-filter: blur(15px);
-  background: rgba(255,255,255,0.05);
-  border-radius:16px;
-  padding:20px;
-  margin-bottom:20px;
-  box-shadow:0 8px 30px rgba(0,0,0,0.4);
-}
-
-/* INPUT */
-input, select{
-  width:100%;
-  padding:12px;
-  margin:8px 0;
-  border:none;
-  border-radius:8px;
-  background: rgba(255,255,255,0.1);
-  color:white;
-}
-
-/* BUTTON */
-button{
-  padding:12px;
-  border:none;
-  border-radius:8px;
-  background: linear-gradient(135deg,#22c55e,#16a34a);
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-button:hover{
-  transform:scale(1.05);
-  background: linear-gradient(135deg,#16a34a,#15803d);
-}
-
-/* SELECT (closed state) */
-select{
-  width:100%;
-  padding:12px;
-  margin:8px 0;
-  border:none;
-  border-radius:8px;
-  background: rgba(255,255,255,0.1);
-  color: white; /* current text */
-}
-
-/* 🔥 DROPDOWN OPTIONS */
-select option{
-  color: black;        /* text sa choices */
-  background: white;   /* dropdown background */
-}
+/* =========================
+   LOGOUT
+========================= */
 
 .logout-btn{
-  position:absolute;
-  right:20px;
-  top:20px;
-  width:auto;
-  padding:8px 15px;
-  background:red;
+  width:100%;
+
+  background:#ef4444;
+
+  border:none;
+
+  padding:14px;
+
+  border-radius:16px;
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s;
 }
+
+.logout-btn:hover{
+  opacity:.9;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.main{
+  flex:1;
+
+  padding:25px;
+
+  overflow-x:hidden;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar{
+  margin-bottom:25px;
+}
+
+.topbar h2{
+  font-size:54px;
+  font-weight:800;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section{
+  width:100%;
+
+  animation:fade .3s ease;
+}
+
+.hidden{
+  display:none;
+}
+
+@keyframes fade{
+
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+/* =========================
+   GRID
+========================= */
+
+.grid{
+  display:grid;
+
+  grid-template-columns:repeat(
+    auto-fit,
+    minmax(320px,1fr)
+  );
+
+  gap:25px;
+
+  margin-bottom:25px;
+}
+
+.table-grid{
+  display:grid;
+
+  grid-template-columns:repeat(
+    auto-fit,
+    minmax(300px,1fr)
+  );
+
+  gap:25px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+  background:linear-gradient(
+    145deg,
+    #111827,
+    #1e293b
+  );
+
+  border:1px solid rgba(255,255,255,.05);
+
+  backdrop-filter:blur(10px);
+
+  border-radius:28px;
+
+  padding:25px;
+
+  margin-bottom:25px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+
+  width:100%;
+
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-2px);
+}
+
+.card h3{
+  margin-bottom:20px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+select{
+  width:100%;
+
+  padding:15px;
+
+  border:none;
+  outline:none;
+
+  border-radius:14px;
+
+  background:#334155;
+
+  color:white;
+
+  margin-bottom:15px;
+
+  font-size:15px;
+}
+
+input::placeholder{
+  color:#94a3b8;
+}
+
+select option{
+  color:black;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button{
+  background:#22c55e;
+
+  border:none;
+
+  color:white;
+
+  padding:14px 20px;
+
+  border-radius:14px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+button:hover{
+  opacity:.9;
+  transform:translateY(-2px);
+}
+
+/* =========================
+   TITLE ROW
+========================= */
+
+.title-row{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:20px;
+}
+
+/* =========================
+   CHART GRID
+========================= */
 
 .chart-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  display:grid;
+
+  grid-template-columns:repeat(
+    auto-fit,
+    minmax(320px,1fr)
+  );
+
+  gap:20px;
+
+  width:100%;
 }
+
+/* =========================
+   CHART CARD
+========================= */
 
 .chart-card{
-  background: rgba(255,255,255,0.05);
-  padding:10px;
-  border-radius:10px;
+  background:#1e293b;
+
+  border-radius:22px;
+
+  padding:20px;
+
+  height:260px;
 }
 
-.chart-card canvas{
-  height:200px !important;
-}
+/* =========================
+   TABLES
+========================= */
 
 .table{
   width:100%;
+
+  border-collapse:collapse;
 }
 
 .table td{
-  padding:10px;
-  border-bottom:1px solid rgba(255,255,255,0.1);
+  padding:12px;
+
+  border-bottom:1px solid rgba(255,255,255,.05);
+
+  color:#cbd5e1;
 }
 
 .table button{
   margin-right:5px;
-  padding:5px 10px;
+
+  padding:6px 12px;
 }

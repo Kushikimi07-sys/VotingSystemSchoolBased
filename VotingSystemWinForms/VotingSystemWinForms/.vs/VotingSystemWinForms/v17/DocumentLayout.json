@@ -1,0 +1,279 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|c:\\users\\administrator\\votingsystem\\votingsystemwinforms\\votingsystemwinforms\\votingsystemwinforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|solutionrelative:votingsystemwinforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\votingsystemwinforms\\tablespage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|solutionrelative:votingsystemwinforms\\tablespage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\votingsystemwinforms\\candidatespage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|solutionrelative:votingsystemwinforms\\candidatespage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\votingsystemwinforms\\tablespage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|solutionrelative:votingsystemwinforms\\tablespage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\votingsystemwinforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|solutionrelative:votingsystemwinforms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\votingsystemwinforms\\admindashboard.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|solutionrelative:votingsystemwinforms\\admindashboard.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\votingsystemwinforms\\dashboardpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|solutionrelative:votingsystemwinforms\\dashboardpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\votingsystemwinforms\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|solutionrelative:votingsystemwinforms\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\votingsystemwinforms\\dashboardpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|solutionrelative:votingsystemwinforms\\dashboardpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\votingsystemwinforms\\dashboardpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|solutionrelative:votingsystemwinforms\\dashboardpage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\votingsystemwinforms\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|solutionrelative:votingsystemwinforms\\admindashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\votingsystemwinforms\\tablespage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|solutionrelative:votingsystemwinforms\\tablespage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\votingsystemwinforms\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|solutionrelative:votingsystemwinforms\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\votingsystemwinforms\\candidatespage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|solutionrelative:votingsystemwinforms\\candidatespage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\votingsystemwinforms\\candidatespage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|solutionrelative:votingsystemwinforms\\candidatespage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\votingsystemwinforms\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{23117871-C45C-42DF-8FFE-3A365BE47BBC}|VotingSystemWinForms\\VotingSystemWinForms.csproj|solutionrelative:votingsystemwinforms\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 15,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "VotingSystemWinForms\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\Form1.Designer.cs",
+              "RelativeToolTip": "VotingSystemWinForms\\Form1.Designer.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAvwDkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T15:46:58.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\Form1.cs",
+              "RelativeDocumentMoniker": "VotingSystemWinForms\\Form1.cs",
+              "ToolTip": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\Form1.cs",
+              "RelativeToolTip": "VotingSystemWinForms\\Form1.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAjwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T15:46:37.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TablesPage.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\TablesPage.Designer.cs",
+              "RelativeDocumentMoniker": "VotingSystemWinForms\\TablesPage.Designer.cs",
+              "ToolTip": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\TablesPage.Designer.cs",
+              "RelativeToolTip": "VotingSystemWinForms\\TablesPage.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T15:29:14.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TablesPage.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\TablesPage.cs",
+              "RelativeDocumentMoniker": "VotingSystemWinForms\\TablesPage.cs",
+              "ToolTip": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\TablesPage.cs",
+              "RelativeToolTip": "VotingSystemWinForms\\TablesPage.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAE4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T15:12:31.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TablesPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\TablesPage.cs",
+              "RelativeDocumentMoniker": "VotingSystemWinForms\\TablesPage.cs",
+              "ToolTip": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\TablesPage.cs [Design]",
+              "RelativeToolTip": "VotingSystemWinForms\\TablesPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T14:57:37.144Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CandidatesPage.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\CandidatesPage.Designer.cs",
+              "RelativeDocumentMoniker": "VotingSystemWinForms\\CandidatesPage.Designer.cs",
+              "ToolTip": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\CandidatesPage.Designer.cs",
+              "RelativeToolTip": "VotingSystemWinForms\\CandidatesPage.Designer.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAawFoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T14:54:28.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CandidatesPage.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\CandidatesPage.cs",
+              "RelativeDocumentMoniker": "VotingSystemWinForms\\CandidatesPage.cs",
+              "ToolTip": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\CandidatesPage.cs",
+              "RelativeToolTip": "VotingSystemWinForms\\CandidatesPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T14:31:35.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CandidatesPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\CandidatesPage.cs",
+              "RelativeDocumentMoniker": "VotingSystemWinForms\\CandidatesPage.cs",
+              "ToolTip": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\CandidatesPage.cs [Design]",
+              "RelativeToolTip": "VotingSystemWinForms\\CandidatesPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T14:23:44.65Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DashboardPage.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\DashboardPage.Designer.cs",
+              "RelativeDocumentMoniker": "VotingSystemWinForms\\DashboardPage.Designer.cs",
+              "ToolTip": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\DashboardPage.Designer.cs",
+              "RelativeToolTip": "VotingSystemWinForms\\DashboardPage.Designer.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T13:55:08.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DashboardPage.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\DashboardPage.cs",
+              "RelativeDocumentMoniker": "VotingSystemWinForms\\DashboardPage.cs",
+              "ToolTip": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\DashboardPage.cs",
+              "RelativeToolTip": "VotingSystemWinForms\\DashboardPage.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAADwv0cAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T13:38:12.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DashboardPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\DashboardPage.cs",
+              "RelativeDocumentMoniker": "VotingSystemWinForms\\DashboardPage.cs",
+              "ToolTip": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\DashboardPage.cs [Design]",
+              "RelativeToolTip": "VotingSystemWinForms\\DashboardPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T13:35:31.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\ApiService.cs",
+              "RelativeDocumentMoniker": "VotingSystemWinForms\\ApiService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\ApiService.cs",
+              "RelativeToolTip": "VotingSystemWinForms\\ApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T11:22:52.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdminDashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\AdminDashboard.cs",
+              "RelativeDocumentMoniker": "VotingSystemWinForms\\AdminDashboard.cs",
+              "ToolTip": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\AdminDashboard.cs [Design]",
+              "RelativeToolTip": "VotingSystemWinForms\\AdminDashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T11:29:34.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AdminDashboard.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\AdminDashboard.cs",
+              "RelativeDocumentMoniker": "VotingSystemWinForms\\AdminDashboard.cs",
+              "ToolTip": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\AdminDashboard.cs",
+              "RelativeToolTip": "VotingSystemWinForms\\AdminDashboard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T11:27:41.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdminDashboard.resx",
+              "DocumentMoniker": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\AdminDashboard.resx",
+              "RelativeDocumentMoniker": "VotingSystemWinForms\\AdminDashboard.resx",
+              "ToolTip": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\AdminDashboard.resx",
+              "RelativeToolTip": "VotingSystemWinForms\\AdminDashboard.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-05-12T11:27:41.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\Form1.cs",
+              "RelativeDocumentMoniker": "VotingSystemWinForms\\Form1.cs",
+              "ToolTip": "C:\\Users\\Administrator\\VotingSystem\\VotingSystemWinForms\\VotingSystemWinForms\\VotingSystemWinForms\\Form1.cs [Design]",
+              "RelativeToolTip": "VotingSystemWinForms\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T06:08:19.632Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

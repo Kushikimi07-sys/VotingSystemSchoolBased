@@ -18,7 +18,22 @@ namespace VotingAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get() => Ok(_context.Candidates.ToList());
+public IActionResult Get()
+{
+    var data = _context.Candidates
+        .Include(c => c.Position)
+        .Select(c => new
+        {
+            id = c.Id,
+            name = c.Name,
+            teamId = c.TeamId,
+            positionId = c.PositionId,
+            positionName = c.Position.Name
+        })
+        .ToList();
+
+    return Ok(data);
+}
 
         [HttpPost]
 public IActionResult Add([FromBody] Candidate c)

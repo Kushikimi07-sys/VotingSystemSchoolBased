@@ -32,23 +32,27 @@ namespace VotingAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
-        {
-            // ✅ ADMIN CHECK REMOVED
+public IActionResult Delete(int id)
+{
+    var team = _context.Teams.Find(id);
 
-            var team = _context.Teams.Find(id);
+    if (team == null)
+        return NotFound();
 
-            if (team == null)
-                return NotFound();
+    //  DELETE RELATED CANDIDATES FIRST
+    var candidates = _context.Candidates
+        .Where(c => c.TeamId == id)
+        .ToList();
 
-                if (_context.Candidates.Any(c => c.TeamId == id))
-    return BadRequest("Cannot delete team with candidates");
+    _context.Candidates.RemoveRange(candidates);
 
-            _context.Teams.Remove(team);
-            _context.SaveChanges();
+    //  DELETE TEAM
+    _context.Teams.Remove(team);
 
-            return Ok("Deleted");
-        }
+    _context.SaveChanges();
+
+    return Ok("Deleted");
+}
 
         [HttpPut("{id}")]
 public IActionResult Update(int id, Team t)
